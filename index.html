@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillCraft — Stopwatch Task 02</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+  <!-- Background petals -->
+  <div class="bg-petals" id="bgPetals"></div>
+ 
+  <!-- Main wrapper -->
+  <div class="wrapper">
+ 
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-icon">SC</span>
+        <span class="brand-name">Skill<em>Craft</em> <span class="task-tag">Task 02</span></span>
+      </div>
+      <p class="page-sub">Stopwatch Web Application</p>
+    </header>
+ 
+    <!-- Main content: clock left, controls right -->
+    <main class="main-grid">
+ 
+      <!-- LEFT: Analog Clock -->
+      <div class="clock-panel">
+        <canvas id="clockCanvas" width="320" height="320"></canvas>
+        <p class="clock-label">ELAPSED TIME</p>
+      </div>
+ 
+      <!-- RIGHT: Digital Stopwatch -->
+      <div class="digital-panel">
+ 
+        <!-- Time display -->
+        <div class="time-display">
+          <span class="time-main" id="timeDisplay">00:00:00</span>
+          <span class="time-ms"   id="msDisplay">.000</span>
+        </div>
+ 
+        <!-- Controls -->
+        <div class="controls">
+          <button class="btn btn-start"  id="startBtn"  title="Space">
+            <span class="btn-icon">▶</span>
+            <span class="btn-label">Start</span>
+          </button>
+          <button class="btn btn-lap"    id="lapBtn"    title="L" disabled>
+            <span class="btn-icon">⏱</span>
+            <span class="btn-label">Lap</span>
+          </button>
+          <button class="btn btn-reset"  id="resetBtn"  title="R" disabled>
+            <span class="btn-icon">↺</span>
+            <span class="btn-label">Reset</span>
+          </button>
+        </div>
+ 
+        <!-- Keyboard hints -->
+        <div class="kbd-hints">
+          <span><kbd>Space</kbd> Start / Pause</span>
+          <span><kbd>L</kbd> Lap</span>
+          <span><kbd>R</kbd> Reset</span>
+        </div>
+ 
+        <!-- Lap list -->
+        <div class="lap-panel" id="lapPanel">
+          <div class="lap-head">
+            <span>Lap</span>
+            <span>Split</span>
+            <span>Total</span>
+          </div>
+          <ul class="lap-list" id="lapList"></ul>
+        </div>
+ 
+      </div>
+    </main>
+ 
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
